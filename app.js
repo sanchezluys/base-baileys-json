@@ -5,14 +5,16 @@ const {
   addKeyword,
 } = require('@bot-whatsapp/bot')
 
-const adapterProvider = createProvider(BaileysProvider,{ 
-        usePairingCode: true, 
-        phoneNumber: '573124671698' })
+
 
 const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 const delay = (ms) => new Promise((res) => setTimeout(res, ms))
+
+const adapterProvider = createProvider(BaileysProvider,{ 
+        usePairingCode: true, 
+        phoneNumber: '573124671698' })
 
 /***
 * Simular peticion async http 1.5 segundos
