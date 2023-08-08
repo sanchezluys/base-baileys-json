@@ -5,6 +5,10 @@ const {
   addKeyword,
 } = require('@bot-whatsapp/bot')
 
+const adapterProvider = createProvider(BaileysProvider,{ 
+        usePairingCode: true, 
+        phoneNumber: '573124671698' })
+
 const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
